@@ -5,7 +5,7 @@ To be exported for editing.
 
 ### Sketches and status
 
-- lamp1
+*lamp1*
 Mars Volta lamp effect, outside view (WIP)
 
 - lamp2
