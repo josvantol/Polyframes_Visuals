@@ -3,19 +3,30 @@
 Processing experiments and sketches for live shows.
 To be exported for editing.
 
-### Sketches and status
+## Sketches and status
 
-_lamp1_
+### Work In Progress
+
+#### lamp1
+
 Mars Volta lamp effect, outside view (WIP)
 
-- lamp2
+#### lamp2
+
 Mars Volta lamp effect, (correct) inside view (WIP)
 
-- circles
+#### colors
+
+Expieriment with blending colors. For RGB split effect. (WIP)
+
+### Planned
+
+#### circles
+
 Circles zooming out. small to large (PLANNED)
 
-- whirlwind
-Spirals turning with alternate colors (FINISHED)
+### Finished
 
-- colors
-Expieriment with blending colors. For RGB split effect. (WIP)
+#### whirlwind
+
+Spirals turning with alternate colors (FINISHED)
