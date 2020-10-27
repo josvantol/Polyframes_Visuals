@@ -8,9 +8,8 @@ PShape Whirl;
 
 void setup()
 {
-  //size(1280, 720);
-  //surface.setLocation(0, 0);
-  fullScreen();
+  size(1280, 720);
+  //fullScreen();
   frameRate(30);
   
   //StartRadius = height/10.0;
