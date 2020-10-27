@@ -10,7 +10,7 @@ To be exported with `saveFrame()` and the Processing Movie Maker for editing in 
 #### lamp1
 
 Mars Volta lamp effect, outside view
-<img src="lamp1\lamp1.jpg" width="200" />
+<br><img src="lamp1\lamp1.jpg" width="200" />
 
 #### lamp2
 
