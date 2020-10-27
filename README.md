@@ -10,7 +10,7 @@ To be exported with `saveFrame()` and the Processing Movie Maker for editing in 
 #### lamp1
 
 Mars Volta lamp effect, outside view
-<img src="lamp1\lamp1.jpg" style="zoom:20%;" />
+<img src="lamp1\lamp1.jpg" style="width:200px" />
 
 #### lamp2
 
@@ -39,82 +39,82 @@ Something with the Paisley pattern.
 #### backgrounds
 
 _We All Differ_ basis backgrounds.
-<img src="backgrounds/a.png" style="zoom:15%;" />
-<img src="backgrounds/b.png" style="zoom:15%;" />
-<img src="backgrounds/c.png" style="zoom:15%;" />
+<img src="backgrounds/a.png" style="width:200px" />
+<img src="backgrounds/b.png" style="width:200px" />
+<img src="backgrounds/c.png" style="width:200px" />
 
 #### bars
 
 vertical bars with noisey width.
-<img src="bars/bars.jpg" style="zoom:10%;" />
+<img src="bars/bars.jpg" style="width:200px" />
 
 #### breathing_circle
 
 slowly growing/shrinking, breathing circle
-<img src="breathing_circle/breath.jpg" style="zoom:10%;" />
+<img src="breathing_circle/breath.jpg" style="width:200px" />
 
 #### desert_dream
 
 flight over dunes
-<img src="desert_dream/dunes.jpg" style="zoom:15%;" />
+<img src="desert_dream/dunes.jpg" style="width:200px" />
 
 #### eyes
 
 _We All Differ_ eyes circling around and slowly zooming in
-<img src="eyes/eyes.jpg" style="zoom:15%;" />
+<img src="eyes/eyes.jpg" style="width:200px" />
 
 #### falling_stars
 
 Falling (snow?) nightly stars
-<img src="falling_stars/stars.jpg" style="zoom:15%;" />
+<img src="falling_stars/stars.jpg" style="width:200px" />
 
 #### flashes
 
 Rhythmic flashes for drumfill
-<img src="flashes/flashes.jpg" style="zoom:15%;" />
+<img src="flashes/flashes.jpg" style="width:200px" />
 
 #### hexes
 
 Mirrored, shrinking hexagons with a sprinkle of glitch.
-<img src="hexes/hexes.jpg" style="zoom:15%;" />
+<img src="hexes/hexes.jpg" style="width:200px" />
 
 #### planets
 
 Passing circles, like planets.
-<img src="planets/planets.jpg" style="zoom:15%;" />
+<img src="planets/planets.jpg" style="width:200px" />
 
 #### popping_circles
 
 Spots (dis)appearing.
-<img src="popping_circles/pop.jpg" style="zoom:15%;" />
+<img src="popping_circles/pop.jpg" style="width:200px" />
 
 #### rainbow
 
 Drugged out happy rainbow
-<img src="rainbow/rainbow.jpg" style="zoom:15%;" />
+<img src="rainbow/rainbow.jpg" style="width:200px" />
 
 #### rects
 
 Rectangles zooming in. Large to small.
-<img src="rects/rects1.jpg" style="zoom:15%;" />
-<img src="rects/rects2.jpg" style="zoom:15%;" />
+<img src="rects/rects1.jpg" style="width:200px" />
+<img src="rects/rects2.jpg" style="width:200px" />
 
 #### richter
 
 Black and white moving rectangles. Very quick aproximation of Hans Richter's art.
-<img src="richter/richter.jpg" style="zoom:15%;" />
+<img src="richter/richter.jpg" style="width:200px" />
 
 #### scanner
 
 Imitating scanner lighting. 5 different patterns.
-<img src="scanner/scanner.jpg" style="zoom:15%;" />
+<img src="scanner/scanner.jpg" style="width:200px" />
 
 #### skyline
 
 Randomly growing/shrinking vertical bars. (Like a skyline?)
-<img src="skyline/skyline.jpg" style="zoom:15%;" />
+<img src="skyline/skyline.jpg" style="width:200px" />
 
 #### whirlwind
 
 Spirals turning with alternate colors
-<img src="whirlwind\whirlwind.jpg" style="zoom:10%;" />
+<img src="whirlwind\whirlwind.jpg" style="width:200px" />
