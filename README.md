@@ -45,7 +45,7 @@ _We All Differ_ basis backgrounds.
 
 #### bars
 
-vertical bars with noisey width.
+vertical bars with noisy width.
 <br><img src="bars/bars.jpg" width="200" />
 
 #### breathing_circle
@@ -101,7 +101,7 @@ Rectangles zooming in. Large to small.
 
 #### richter
 
-Black and white moving rectangles. Very quick aproximation of Hans Richter's art.
+Black and white moving rectangles. Very quick approximation of Hans Richter's art.
 <br><img src="richter/richter.jpg" width="200" />
 
 #### scanner
