@@ -59,3 +59,20 @@ float EaseOutInSine(float A, float t, float B)
   }
   return (1.0 - t) * A + t * B;
 }
+
+// Other easing functions
+
+float EaseOutInSqrt(float A, float t, float B)
+{
+  t *= 2.0;
+  if (t < 1.0)
+  {
+    t = 0.5 * pow(t, 0.5);
+  }
+  else
+  {
+    t = 0.5 * (2.0 - pow(2.0 - t, 0.5));
+  }
+  
+  return (1.0 - t) * A + t * B;
+}

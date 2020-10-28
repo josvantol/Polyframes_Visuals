@@ -19,7 +19,7 @@ void draw()
   for (int i = 0; i < Amount; i++)
   {
     L = 1.0/(float)Amount*i;
-    float XL = EaseOutInSine(0, L, width);
+    float XL = EaseOutInSqrt(0, L, width);
     line(XL, 0, XL, height);
   }
   
@@ -28,5 +28,5 @@ void draw()
   if (X > 1.0) X -= 1.0;
   stroke(0xFFFF0000);
   strokeWeight(5);
-  point(EaseOutInSine(0, X, width), height/2 + 5);
+  point(EaseOutInSqrt(0, X, width), height/2 + 5);
 }
