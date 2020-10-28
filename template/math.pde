@@ -18,13 +18,13 @@ float Lerp(float A, float t, float B)
 float Smoothstep(float A, float t, float B)
 {
   t = t * t * (3.0 - 2.0 * t);
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
 
 float Smootherstep(float A, float t, float B)
 {
   t = t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
 
 // Easing functions from
@@ -33,19 +33,19 @@ float Smootherstep(float A, float t, float B)
 float EaseOutSine(float A, float t, float B)
 {
   t = sin(t * HALF_PI);
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
 
 float EaseInSine(float A, float t, float B)
 {
   t =  1.0 - cos(t * HALF_PI);
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
 
 float EaseInOutSine(float A, float t, float B)
 {
   t = -(cos(t * PI) - 1.0) / 2.0;
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
 
 float EaseOutInSine(float A, float t, float B)
@@ -59,7 +59,7 @@ float EaseOutInSine(float A, float t, float B)
   {
     t = 0.5 * (1 - cos((t - 1.0) * HALF_PI)) + 0.5;
   }
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
 
 // Other easing functions
@@ -75,6 +75,5 @@ float EaseOutInSqrt(float A, float t, float B)
   {
     t = 0.5 * (2.0 - pow(2.0 - t, 0.5));
   }
-  
-  return (1.0 - t) * A + t * B;
+  return Lerp(A, t, B);
 }
