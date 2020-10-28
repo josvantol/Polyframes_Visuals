@@ -2,17 +2,17 @@ float Easing(float Lerp)
 {
   float Result;
   // easeInOutSine
-  //Result =  -(cos(PI * Lerp) - 1) / 2;
+  Result =  -(cos(PI * Lerp) - 1) / 2;
   
   // easeInOutCubic
-  if (Lerp < 0.5)
-  {
-    Result =  4 * Lerp * Lerp * Lerp;
-  }
-  else
-  {
-    Result =  1 - pow(-2 * Lerp + 2, 3) / 2;
-  }
+  //if (Lerp < 0.5)
+  //{
+  //  Result =  4 * Lerp * Lerp * Lerp;
+  //}
+  //else
+  //{
+  //  Result =  1 - pow(-2 * Lerp + 2, 3) / 2;
+  //}
   
   return Result;
 }
@@ -96,7 +96,7 @@ void draw()
     Y += 2*h;
   }
   
-  filter(BLUR, 2);
+  //filter(BLUR, 2);
   
   //if (frameCount < 30 * 5)
   //{
