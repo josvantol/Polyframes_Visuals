@@ -1,3 +1,5 @@
+// Last update: Oct 28, 2020
+
 float Clamp(float Value)
 {
   if (Value > 1.0) Value = 1.0;
