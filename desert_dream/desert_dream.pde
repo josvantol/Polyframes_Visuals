@@ -1,11 +1,15 @@
 ArrayList<DuneRow> dunes;
 int DUNE_ROWS = 20;
-color front = color(0);
-color back = color(9, 31, 59);
-int x_offset = 30;
+color front = color(0, 16, 0);
+color back = color(0, 128, 0);
+int x_offset = 10;
+
+boolean Recording = false;
+int RecordingFrame = -1;
 
 void setup() {
-  size(960, 540);
+  //size(1080, 1920);
+  size(540, 960);
   background(front);
   frameRate(60);
 
@@ -15,10 +19,10 @@ void setup() {
 
 void draw() {
   noStroke();
-  fill(front, 100);
+  fill(front, 75);
   rect(0, 0, width, height);
 
-  stroke(255);
+  stroke(0, 255, 0);
   strokeWeight(2);
 
   if (frameCount % 120 < 1)
@@ -32,12 +36,22 @@ void draw() {
     if (d.alive == false) dunes.remove(0);
   }
   
-  //if (frameCount > 60*60 && frameCount < 4 * 60 * 60)
-  //{
-  //  saveFrame();
-  //}
-  //else if (frameCount > 4 * 60 * 60)
-  //{
-  //  exit();
-  //}
+  if (Recording == true)
+  {
+    saveFrame();
+    println("Saved frame: ", frameCount - RecordingFrame, " / ", 15*60);
+    if (frameCount >= RecordingFrame + 15*60)
+    {
+      exit();
+    }
+  }
+}
+
+void keyReleased()
+{
+  if (key == 'r')
+  {
+    Recording = true;
+    RecordingFrame = frameCount;
+  }
 }
