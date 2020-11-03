@@ -15,6 +15,7 @@ Mars Volta lamp effect, outside view
 #### lamp2
 
 Mars Volta lamp effect, (correct) inside view
+<br><img src="lamp2\lamp2.jpg" width="200" />
 
 #### colors
 

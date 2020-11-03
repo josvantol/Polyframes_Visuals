@@ -1,4 +1,18 @@
-// Last update: Oct 28, 2020
+// Last update: Nov 3, 2020
+
+boolean IsOdd(int X)
+{
+  boolean Result;
+  Result = boolean(X % 2);
+  return Result;
+}
+
+boolean IsEven(int X)
+{
+  boolean Result;
+  Result = boolean(1 - (X % 2));
+  return Result;
+}
 
 float Clamp(float Value)
 {

@@ -1,12 +1,23 @@
 float Speed = 20.0;
-int XAmount = 20;
+float Bleed = 0.27;
+float Margin = 0.05;
+int XAmount = 16;
 int YAmount = 7;
+color Color = #FF4000;
+
 PVector[][] Coord;
 
 void setup()
 {
-  size(1280, 720);
+  size(640, 360);
+  //fullScreen();
   frameRate(30);
+  
+  if (IsOdd(XAmount))
+  {
+    println("XAmount has to be EVEN.");
+    exit();
+  }
   
   Coord = new PVector[YAmount][XAmount];
   for (int YIndex = 0; YIndex < YAmount; YIndex++)
@@ -21,24 +32,68 @@ void setup()
 void draw()
 {
   background(0xFF000000);
-  stroke(0xFFFFFFFF);
-  strokeWeight(5);
-  
-  int Counter = 0;
+  noStroke();
   
   for (int YIndex = 0; YIndex < YAmount; YIndex++)
   {
+    // Offset for strating at first or second X coord
+    int Offset = YIndex % 2;
     for (int XIndex = 0; XIndex < XAmount; XIndex++)
     {
-      // DEBUG DRAW
-      point(Coord[YIndex][XIndex].x * width, Coord[YIndex][XIndex].y * height);
-      text(Counter, Coord[YIndex][XIndex].x * width + 5, Coord[YIndex][XIndex].y * height + 10);
-      Counter++;
+      // Lerp
+      Coord[YIndex][XIndex].x += 1.0 / (frameRate * Speed);
+      if (Coord[YIndex][XIndex].x > 1.0) Coord[YIndex][XIndex].x -= 1.0;
       
-      // RELEASE DRAW
-      //Coord[YIndex][XIndex].x += 1.0 / (frameRate * Speed);
-      //if (Coord[YIndex][XIndex].x > 1.0) Coord[YIndex][XIndex].x -= 1.0;
-      //point(EaseOutInSqrt(-width*0.25, Coord[YIndex][XIndex].x, width*1.25), Coord[YIndex][XIndex].y * height);
+      // Draw Rects
+      fill(Color);
+      if((XIndex + Offset) % 2 == 0)
+      {
+        // Get base coord.
+        float x = EaseOutInSqrt(-width*Bleed, Coord[YIndex][XIndex].x, width*(1.0+Bleed));
+        float y = Coord[YIndex][XIndex].y * height;
+        float NextX = 0.0;
+        float NextY = 0.0;
+        float h = 0.0;
+        float w = 0.0;
+        
+        // Calc w/h with 'next' coord
+        if (XIndex < XAmount-1 && YIndex < YAmount-1)
+        {
+          NextX = EaseOutInSqrt(-width*Bleed, Coord[YIndex][XIndex+1].x, width*(1.0+Bleed));
+          NextY = Coord[YIndex+1][XIndex].y * height;
+          w = NextX - x;
+          h = NextY - y;
+        }
+        // special cases at 1.0/0.0 border
+        else if (XIndex == XAmount-1)
+        {
+          NextX = EaseOutInSqrt(-width*Bleed, Coord[YIndex][0].x, width*(1.0+Bleed));
+          NextY = Coord[YIndex+1][XIndex].y * height;
+          w = NextX - x;
+          h = NextY - y;
+        }
+        // special cases at bottom
+        else if (YIndex == YAmount-1)
+        {
+          NextX = EaseOutInSqrt(-width*Bleed, Coord[YIndex][XIndex+1].x, width*(1.0+Bleed));
+          NextY = height;
+          w = NextX - x;
+          h = NextY - y;
+        }
+        
+        if (NextX > x)
+        {
+          // Add margins.
+          float RealW = w * (1.0 - Margin);
+          float RealH = h * (1.0 - Margin);
+          y += (h - RealH) / 2.0;
+          x += (w - RealW) / 2.0;
+          
+          rect(x, y, RealW, RealH);
+        }
+      }
     }
   }
+  
+  filter(BLUR, 2);
 }
