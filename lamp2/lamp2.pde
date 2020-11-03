@@ -4,6 +4,7 @@ float Margin = 0.05;
 int XAmount = 16;
 int YAmount = 7;
 color Color = #FF4000;
+boolean Record = false;
 
 PVector[][] Coord;
 
@@ -41,7 +42,7 @@ void draw()
     for (int XIndex = 0; XIndex < XAmount; XIndex++)
     {
       // Lerp
-      Coord[YIndex][XIndex].x += 1.0 / (frameRate * Speed);
+      Coord[YIndex][XIndex].x += 1.0 / (30.0 * Speed);
       if (Coord[YIndex][XIndex].x > 1.0) Coord[YIndex][XIndex].x -= 1.0;
       
       // Draw Rects
@@ -96,4 +97,16 @@ void draw()
   }
   
   filter(BLUR, 2);
+  
+  if (Record)
+  {
+    if (frameCount < 30.0 * Speed) 
+    {
+      saveFrame();
+    }
+    else
+    {
+      exit();
+    }
+  }
 }
