@@ -45,8 +45,12 @@ void draw()
       Coord[YIndex][XIndex].x += 1.0 / (30.0 * Speed);
       if (Coord[YIndex][XIndex].x > 1.0) Coord[YIndex][XIndex].x -= 1.0;
       
+      // Choose color
+      colorMode(HSB, 1.0);
+      float ColorFunc = 0.2 + 0.8 * sin(Coord[YIndex][XIndex].x * PI);
+      fill(hue(Color), saturation(Color), brightness(Color)*ColorFunc);
+      
       // Draw Rects
-      fill(Color);
       if((XIndex + Offset) % 2 == 0)
       {
         // Get base coord.
@@ -109,4 +113,9 @@ void draw()
       exit();
     }
   }
+}
+
+void mouseReleased()
+{
+  saveFrame("lamp2.jpg");
 }
