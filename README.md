@@ -11,6 +11,11 @@ To be exported with `saveFrame()` and the Processing Movie Maker for editing in 
 
 Experiment with blending colors. For RGB split effect.
 
+#### eclipse
+
+eclipse animation
+<br><img src="eclipse/eclipse.jpg" width="200" />
+
 ### Planned
 
 #### noise
