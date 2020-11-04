@@ -1,6 +1,6 @@
 float Speed = 20.0;
 float Bleed = 0.27;
-float Margin = 0.05;
+float Margin = 0.1;
 int XAmount = 16;
 int YAmount = 7;
 color Color = #FF4000;
@@ -10,7 +10,7 @@ PVector[][] Coord;
 
 void setup()
 {
-  size(640, 360);
+  size(960, 540);
   //fullScreen();
   frameRate(30);
   
@@ -30,11 +30,8 @@ void setup()
   }
 }
 
-void draw()
+void DrawRects(float Alpha, boolean SecondPass)
 {
-  background(0xFF000000);
-  noStroke();
-  
   for (int YIndex = 0; YIndex < YAmount; YIndex++)
   {
     // Offset for strating at first or second X coord
@@ -42,13 +39,16 @@ void draw()
     for (int XIndex = 0; XIndex < XAmount; XIndex++)
     {
       // Lerp
-      Coord[YIndex][XIndex].x += 1.0 / (30.0 * Speed);
-      if (Coord[YIndex][XIndex].x > 1.0) Coord[YIndex][XIndex].x -= 1.0;
+      if (!SecondPass)
+      {
+        Coord[YIndex][XIndex].x += 1.0 / (30.0 * Speed);
+        if (Coord[YIndex][XIndex].x > 1.0) Coord[YIndex][XIndex].x -= 1.0;
+      }
       
       // Choose color
       colorMode(HSB, 1.0);
-      float ColorFunc = 0.2 + 0.8 * sin(Coord[YIndex][XIndex].x * PI);
-      fill(hue(Color), saturation(Color), brightness(Color)*ColorFunc);
+      float ColorFunc = 0.3 + 0.7 * sin(Coord[YIndex][XIndex].x * PI);
+      fill(hue(Color), saturation(Color), brightness(Color)*ColorFunc, Alpha);
       
       // Draw Rects
       if((XIndex + Offset) % 2 == 0)
@@ -99,7 +99,17 @@ void draw()
       }
     }
   }
+}
+
+void draw()
+{
+  colorMode(HSB, 1.0);
+  background(hue(Color), saturation(Color), brightness(Color)*0.15);
+  noStroke();
   
+  DrawRects(1.0, false);
+  filter(BLUR, 16);
+  DrawRects(0.75, true);
   filter(BLUR, 2);
   
   if (Record)
@@ -115,7 +125,7 @@ void draw()
   }
 }
 
-void mouseReleased()
-{
-  saveFrame("lamp2.jpg");
-}
+//void mouseReleased()
+//{
+//  saveFrame("lamp2.jpg");
+//}
