@@ -7,25 +7,11 @@ To be exported with `saveFrame()` and the Processing Movie Maker for editing in 
 
 ### Work In Progress
 
-#### lamp1
-
-Mars Volta lamp effect, outside view
-<br><img src="lamp1\lamp1.jpg" width="200" />
-
-#### lamp2
-
-Mars Volta lamp effect, (correct) inside view
-<br><img src="lamp2\lamp2.jpg" width="200" />
-
 #### colors
 
 Experiment with blending colors. For RGB split effect.
 
 ### Planned
-
-#### circles
-
-Circles zooming out. Small to large.
 
 #### noise
 
@@ -54,6 +40,11 @@ vertical bars with noisy width.
 slowly growing/shrinking, breathing circle
 <br><img src="breathing_circle/breath.jpg" width="200" />
 
+#### circles
+
+Circles zooming out. Small to large.
+<br><img src="circles/circles.jpg" width="200" />
+
 #### desert_dream
 
 flight over dunes
@@ -78,6 +69,16 @@ Rhythmic flashes for drumfill
 
 Mirrored, shrinking hexagons with a sprinkle of glitch.
 <br><img src="hexes/hexes.jpg" width="200" />
+
+#### lamp1
+
+Mars Volta lamp effect, outside view
+<br><img src="lamp1\lamp1.jpg" width="200" />
+
+#### lamp2
+
+Mars Volta lamp effect, (correct) inside view
+<br><img src="lamp2\lamp2.jpg" width="200" />
 
 #### planets
 
