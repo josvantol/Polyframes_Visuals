@@ -5,6 +5,7 @@ int XAmount = 16;
 int YAmount = 7;
 color Color = #FF4000;
 boolean Record = false;
+boolean Blurred = false;
 
 PVector[][] Coord;
 
@@ -108,9 +109,12 @@ void draw()
   noStroke();
   
   DrawRects(1.0, false);
-  filter(BLUR, 16);
-  DrawRects(0.75, true);
-  filter(BLUR, 2);
+  if (Blurred)
+  {
+    filter(BLUR, 16);
+    DrawRects(0.75, true);
+    filter(BLUR, 2);
+  }
   
   if (Record)
   {
