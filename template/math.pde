@@ -84,7 +84,7 @@ float EaseInQuad(float A, float t, float B)
 
 float EaseOutQuad(float A, float t, float B)
 {
-  t = 1 - (1 - t) * (1 - t);
+  t = 1.0 - (1.0 - t) * (1.0 - t);
   return Lerp(A, t, B);
 }
 
@@ -92,11 +92,11 @@ float EaseInOutQuad(float A, float t, float B)
 {
   if (t < 0.5)
   {
-    t = 2 * t * t;
+    t = 2.0 * t * t;
   }
   else
   {
-    t = 1 - pow(-2 * t + 2, 2) / 2;
+    t = 1.0 - pow(-2.0 * t + 2.0, 2.0) / 2.0;
   }
   return Lerp(A, t, B);
 }
