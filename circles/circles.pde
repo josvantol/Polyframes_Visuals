@@ -1,5 +1,25 @@
 float MaxRadiusMargin = 1.23;
 
+// Nick Mason
+//color A = 0xFFE8E3C5;
+//color B = 0xFF97B18F;
+
+// Artwork 1
+//color A = 0xFFF2E32E;
+//color B = 0xFFC26302;
+
+// Artwork 2
+//color A = 0xFF874B72;
+//color B = 0xFFD80441;
+
+// Artwork 3
+//color A = 0xFFCF0503;
+//color B = 0xFF000000;
+
+// Artwork 4
+color A = 0xFFAEB2AE;
+color B = 0xFFC7CC33;
+
 class Circle
 {
   float Radius, MaxRadius, Lerp;
@@ -24,11 +44,11 @@ class Circle
     noStroke();
     if (boolean(Color))
     {
-      fill(0xFFE8E3C5);
+      fill(A);
     }
     else
     {
-      fill(0xFF97B18F);
+      fill(B);
     }
     ellipseMode(CENTER);
     circle(width/2.0, height/2.0, Radius);
@@ -41,7 +61,7 @@ float Speed = 15.0;
 
 void setup()
 {
-  size(960, 540);
+  size(1280, 720);
   //fullScreen();
   frameRate(30);
   
@@ -75,5 +95,14 @@ void draw()
   for (int Index = Amount; Index > 0; Index--)
   {
     Circles[Index-1].render();
+  }
+  
+  if (frameCount < 15*30)
+  {
+    saveFrame();
+  }
+  else
+  {
+    exit();
   }
 }

@@ -2,14 +2,17 @@ ArrayList<DuneRow> dunes;
 int DUNE_ROWS = 20;
 color front = color(0, 16, 0);
 color back = color(0, 128, 0);
-int x_offset = 10;
+int x_offset = 20;
 
 boolean Recording = false;
 int RecordingFrame = -1;
 
+int SECONDS_TO_RECORD = 5;
+// Press 'r' to record
+
 void setup() {
   //size(1080, 1920);
-  size(540, 960);
+  size(960, 540);
   background(front);
   frameRate(60);
 
@@ -39,8 +42,8 @@ void draw() {
   if (Recording == true)
   {
     saveFrame();
-    println("Saved frame: ", frameCount - RecordingFrame, " / ", 15*60);
-    if (frameCount >= RecordingFrame + 15*60)
+    println("Saved frame: ", frameCount - RecordingFrame, " / ", SECONDS_TO_RECORD*60);
+    if (frameCount >= RecordingFrame + SECONDS_TO_RECORD*60)
     {
       exit();
     }

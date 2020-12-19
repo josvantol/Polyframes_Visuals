@@ -20,7 +20,11 @@ eclipse animation
 
 #### noise
 
-Lo-fi video noise effect.
+Lo-fi VHS/CRT video noise effect.
+
+#### pixel sorting
+
+Versatile pixel sorting app.
 
 #### paisley
 

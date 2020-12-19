@@ -63,7 +63,7 @@ void draw()
   float Xorig = 10*sin(frameCount/TWO_PI/2.0);
   float Yorig = 10*cos(frameCount/TWO_PI/2.0);
   
-  background(0xFF000000);
+  background(0xFFFF7300);
   
   int ci = 0;
   y = Yorig - height/2;

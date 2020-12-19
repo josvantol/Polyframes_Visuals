@@ -20,7 +20,6 @@ void draw()
     float x = height/3.0 * cos(TWO_PI/Steps*i - HALF_PI);
     float y = height/3.0 * sin(TWO_PI/Steps*i - HALF_PI);
     vertex(x, y, 0);
-    text(i, x, y, 0);
   }
   endShape(CLOSE);
   
@@ -30,7 +29,6 @@ void draw()
     float x = height/3.0 * cos(TWO_PI/Steps*i - HALF_PI);
     float y = height/3.0 * sin(TWO_PI/Steps*i - HALF_PI);
     vertex(x, y, 50);
-    text(i, x, y, 50);
   }
   endShape(CLOSE);
 }

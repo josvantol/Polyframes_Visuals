@@ -3,7 +3,7 @@ float Bleed = 0.27;
 float Margin = 0.1;
 int XAmount = 16;
 int YAmount = 7;
-color Color = #FF4000;
+color Color = #DF0032;
 boolean Record = false;
 boolean Blurred = false;
 
@@ -11,7 +11,7 @@ PVector[][] Coord;
 
 void setup()
 {
-  size(960, 540);
+  size(1280, 720);
   //fullScreen();
   frameRate(30);
   
@@ -121,6 +121,7 @@ void draw()
     if (frameCount < 30.0 * Speed) 
     {
       saveFrame();
+      println("Saved frame: " + frameCount + " / " + 30*(int)Speed);
     }
     else
     {
